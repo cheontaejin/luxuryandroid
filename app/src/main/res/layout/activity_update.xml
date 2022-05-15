@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvProductCd"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="24sp" />-->
+
+    <EditText
+        android:id="@+id/etProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="제품명"
+        android:textSize="24sp" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/etBarCode"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="바코드"-->
+<!--        android:textSize="24sp" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etWonAmt"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="원가"-->
+<!--        android:inputType="number"-->
+<!--        android:textSize="24sp" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etMaeAmt"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="매가"-->
+<!--        android:inputType="number"-->
+<!--        android:textSize="24sp" />-->
+
+<!--    <RadioGroup-->
+<!--        android:id="@+id/RgUseYN"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/RbUseY"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Y" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/RbUseN"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="N" />-->
+<!--    </RadioGroup>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수정"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="취소"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
