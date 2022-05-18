@@ -50,7 +50,7 @@ public class ListViewAdapter extends BaseAdapter {
         v = inflater.inflate(R.layout.activity_listview_item, parent, false);
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
-//        TextView productCd = v.findViewById(R.id.tvProductCd);
+        TextView productPrice = v.findViewById(R.id.tvProductPrice);
         TextView productName = v.findViewById(R.id.tvProductName);
 //        TextView barCode = v.findViewById(R.id.tvBarCode);
 //        TextView wonAmt = v.findViewById(R.id.tvWonAmt);
@@ -58,7 +58,7 @@ public class ListViewAdapter extends BaseAdapter {
 //        TextView useYN = v.findViewById(R.id.tvUseYN);
 
         // 아이템 내 각 위젯에 데이터 반영
-//        productCd.setText(listViewItem.get(position).getProductCd());
+        productPrice.setText(String.valueOf(listViewItem.get(position).getProductPrice()));
         productName.setText(listViewItem.get(position).getProductName());
 //        barCode.setText(listViewItem.get(position).getBarCode());
 //        wonAmt.setText(String.valueOf(listViewItem.get(position).getWon_Amt()));

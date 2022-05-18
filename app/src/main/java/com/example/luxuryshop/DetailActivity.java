@@ -18,13 +18,13 @@ import retrofit2.Response;
 public class DetailActivity extends AppCompatActivity {
     private final String TAG = getClass().getSimpleName();
 
-    private TextView tvProductCd, tvProductName, tvBarCode, tvWonAmt, tvMaeAmt, tvUseYN;
+    private TextView tvProductPrice, tvProductName, tvBarCode, tvWonAmt, tvMaeAmt, tvUseYN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-//        tvProductCd = findViewById(R.id.tvProductCd);
+        tvProductPrice = findViewById(R.id.tvProductPrice);
         tvProductName = findViewById(R.id.tvProductName);
 //        tvBarCode = findViewById(R.id.tvBarCode);
 //        tvWonAmt = findViewById(R.id.tvWonAmt);
@@ -40,7 +40,7 @@ public class DetailActivity extends AppCompatActivity {
         btnCancel.setOnClickListener(btnListener);
 
         Intent intent = getIntent(); // 보내온 Intent를 얻는다
-//        tvProductCd.setText(intent.getStringExtra("productCd"));
+        tvProductPrice.setText(String.valueOf(intent.getIntExtra("productPrice", 0)));
         tvProductName.setText(intent.getStringExtra("productName"));
 //        tvBarCode.setText(intent.getStringExtra("barCode"));
 //        tvWonAmt.setText(String.valueOf(intent.getIntExtra("won_Amt", 0)));
@@ -54,7 +54,7 @@ public class DetailActivity extends AppCompatActivity {
             switch (view.getId()) {
                 case R.id.btnUpdateForm: // 수정 폼으로 이동
                     Intent intent = new Intent(getApplicationContext(), UpdateActivity.class);
-//                    intent.putExtra("productCd", tvProductCd.getText().toString());
+                    intent.putExtra("productPrice", tvProductPrice.getText().toString());
                     intent.putExtra("productName", tvProductName.getText().toString());
 //                    intent.putExtra("barCode", tvBarCode.getText().toString());
 //                    intent.putExtra("won_Amt", tvWonAmt.getText().toString());
@@ -74,7 +74,7 @@ public class DetailActivity extends AppCompatActivity {
     };
 
     public void deleteProduct() {
-        String productCd = tvProductCd.getText().toString();
+        String productCd = tvProductPrice.getText().toString();
         ProductService service = RetrofitClient.getClient().create(ProductService.class);
         Call<ProductDto> call = service.deleteProduct(productCd);
         call.enqueue(mRetrofitCallback);

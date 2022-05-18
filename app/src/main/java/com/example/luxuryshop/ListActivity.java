@@ -38,7 +38,7 @@ public class ListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
 
-//                intent.putExtra("productCd", list.get(i).getProductCd());
+                intent.putExtra("productPrice", list.get(i).getProductPrice());
                 intent.putExtra("productName", list.get(i).getProductName());
 //                intent.putExtra("barCode", list.get(i).getBarCode());
 //                intent.putExtra("won_Amt", list.get(i).getWon_Amt());
